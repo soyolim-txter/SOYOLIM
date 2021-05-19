@@ -79,4 +79,6 @@ venv/
 
 db.sqlite3p
 
-.idea
+.idea/
+
+__pycache__/
