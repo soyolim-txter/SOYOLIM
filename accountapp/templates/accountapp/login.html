@@ -9,7 +9,7 @@
         <div class="mb-3">
          <h4>Login</h4>
         </div>
-    <form action="" method="post">
+    <form action="{% url 'accountapp:login' %}" method="post">
        {% csrf_token %}
 <!--      {{ form }}-->
         {% bootstrap_form form %}
