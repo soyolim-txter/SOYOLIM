@@ -1,6 +1,6 @@
 .header_con{
     text-align: center;
-    margin : 2rem 0;"
+    margin : 2rem 0;
 }
 
 .header_logo{
@@ -22,6 +22,5 @@
 }
 
 .footer_btn{
-    font-size: 1em;
+    font-size: 0.8rem;
 }
-

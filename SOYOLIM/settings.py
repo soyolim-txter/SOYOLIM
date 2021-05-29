@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'accountapp',
+    'bootstrap4',
 ]
 
 MIDDLEWARE = [
@@ -138,7 +139,7 @@ STATIC_ROOT = os.path.join(BASE_DIR,'staticfiles')
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 STATICFILES_DIRS = [
-    BASE_DIR / "static",
+    BASE_DIR / "static"
 ]
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
