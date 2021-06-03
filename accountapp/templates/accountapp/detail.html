@@ -4,14 +4,19 @@
 
   <div>
     <div style = "text-align: center; max-width: 500px; margin: 4rem auto;">
-      <p>
-        {{ target_user.date_joined }}
-      </p>
+<!--      <p>-->
+<!--        {{ target_user.date_joined }}-->
+<!--      </p>-->
+      <figure style="margin-bottom: 1rem;">
+        <img style="width: 12rem; height:12rem; border-radius: 50%" src="{{target_user.profile.image.url}}" alt="">
+      </figure>
+
       {% if target_user.profile %}
       <h2>
         {{ target_user.profile.nickname }}
       </h2>
-      <div>{{ target_user.profile.message }}</div>
+      <h4 style="font-weight: 300;">{{ target_user.profile.message }}</h4></br>
+      <div><a href="{% url 'profileapp:update' pk=target_user.profile.pk %}">Edit</a></div>
       {% else %}
       <a href="{% url 'profileapp:create' %}">
       <h2>
