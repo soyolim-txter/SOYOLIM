@@ -82,3 +82,5 @@ db.sqlite3p
 .idea/
 
 __pycache__/
+
+media/
