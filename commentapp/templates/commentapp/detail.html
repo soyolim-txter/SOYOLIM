@@ -1,0 +1,15 @@
+<div style="border: 1px dashed lightgrey; text-align:left; padding: 4%; margin: 1rem 0 ;border-radius: 1.5rem;">
+  <div>
+    <strong>{{comment.writer.profile.nickname}}</strong>
+    &nbsp&nbsp&nbsp
+    <span style="font-size: 0.8rem;">{{ comment.created_at }}</span>
+  </div>
+  <div style="margin: 1rem 0;">
+    {{ comment.content }}
+  </div>
+  {% if comment.writer == user %}
+  <div style="text-align:right;">
+    <a href="{% url 'commentapp:delete' pk=comment.pk%}" class="btn btn-secondary rounded-pill col-2">Delete</a>
+  </div>
+  {% endif %}
+</div>
