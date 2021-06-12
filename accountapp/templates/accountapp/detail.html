@@ -6,7 +6,7 @@
     <div style = "text-align: center; max-width: 500px; margin: 4rem auto;">
       {% if target_user.profile %}
         <figure style="margin-bottom: 1rem;">
-            <img style="width: 12rem; height:12rem; border-radius: 50%" src="{{target_user.profile.image.url}}" alt="">
+            <img style="width: 12rem; height:12rem; border-radius: 50%; object-fit:cover;" src="{{target_user.profile.image.url}}" alt="">
         </figure>
         <h2>{{ target_user.profile.nickname }}</h2>
         <h4 style="font-weight: 300;">{{ target_user.profile.message }}</h4></br>
