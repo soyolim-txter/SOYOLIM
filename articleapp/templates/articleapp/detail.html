@@ -23,8 +23,10 @@
     rounded-pill col-2">
       Delete
     </a>
-    <hr>
     {% endif %}
+    <hr>
+
+    {% include 'commentapp/create.html' with article=target_article %}
   </div>
 </div>
 
