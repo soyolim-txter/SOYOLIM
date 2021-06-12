@@ -11,7 +11,7 @@ from commentapp.decorators import comment_ownership_required
 from commentapp.forms import CommentCreationForm
 from commentapp.models import Comment
 
-has_ownership =[comment_ownership_required,login_required]
+has_ownership =[login_required,comment_ownership_required]
 
 @method_decorator(has_ownership,'get')
 @method_decorator(has_ownership,'post')
