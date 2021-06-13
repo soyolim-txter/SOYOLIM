@@ -11,27 +11,9 @@ from django.views.generic.list import MultipleObjectMixin
 
 from accountapp.decorators import account_ownership_requred
 from accountapp.forms import AccountUpdateForm
-from accountapp.models import HelloWorld
 from articleapp.models import Article
 
 has_ownership = [login_required,account_ownership_requred]
-
-@login_required
-def hello_world(request):
-
-        if request.method == "POST":
-            temp = request.POST.get('hello_world_input')
-            # DB관련
-            new_hello_world = HelloWorld()
-            new_hello_world.text = temp
-            new_hello_world.save()
-            # DB 관련
-
-            return HttpResponseRedirect(reverse('accountapp:hello_world'))
-        else:
-            hello_world_list = HelloWorld.objects.all()
-            return render(request,"accountapp/hello_world.html",context={'hello_world_list': hello_world_list})
-
 
 class AccountCreateView(CreateView):
     model = User
