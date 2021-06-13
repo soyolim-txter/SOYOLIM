@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load bootstrap4 %}
 
 {% block content %}
 <div>
@@ -11,9 +12,9 @@
     </h6>
     <hr>
     <img style="width:100%; border-radius: 1rem; margin-bottom:1rem;" src="{{ target_article.image.url }}" alt="">
-    <p>
-      {{ target_article.content }}
-    </p>
+    <div class="text-left" style="text-align:left;">
+      {{ target_article.content | safe }}
+    </div>
     {% if target_article.writer == user %}
     <a href="{% url 'articleapp:update' pk=target_article.pk %}"  class="btn btn-primary
     rounded-pill col-2">
