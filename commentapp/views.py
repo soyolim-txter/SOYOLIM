@@ -13,8 +13,8 @@ from commentapp.models import Comment
 
 has_ownership =[login_required,comment_ownership_required]
 
-@method_decorator(has_ownership,'get')
-@method_decorator(has_ownership,'post')
+@method_decorator(login_required,'get')
+@method_decorator(login_required,'post')
 class CommentCreateView(CreateView):
     model = Comment
     form_class = CommentCreationForm
