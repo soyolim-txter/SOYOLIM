@@ -83,4 +83,6 @@ db.sqlite3p
 
 __pycache__/
 
-media/
+Dockerfile
+
+ngins.conf
