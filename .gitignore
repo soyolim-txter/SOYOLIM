@@ -82,7 +82,3 @@ db.sqlite3p
 .idea/
 
 __pycache__/
-
-Dockerfile
-
-ngins.conf
