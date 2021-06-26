@@ -8,6 +8,8 @@ WORKDIR /home/SOYOLIM/
 
 RUN pip install -r requirements.txt
 
+RUN pip install gunicorn
+
 RUN echo "SECRET_KEY=django-insecure-)02_#9l&0slyqvuf3zne6l3d!v)$ud2*9j3)mob(w@&m&)!w(+" > .env
 
 RUN python manage.py migrate
