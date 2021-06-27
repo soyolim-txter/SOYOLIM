@@ -29,7 +29,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'django',
         'USER': 'soyolim',
-        'PASSWORD': '@chzhfflt0605',
+        'PASSWORD': 'chzhfflt0605',
         'HOST': 'mariadb',
         'PORT': '3306',
     }
